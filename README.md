@@ -1,3 +1,4 @@
+logo.jpg
 <<div style="text-align:center; padding:20px;">
   <img src="logo.jpg" alt="Finance Flow Logo" width="220">
 </div>
