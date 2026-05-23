@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -441,7 +440,33 @@ Easy finance solutions for second-hand car purchases.
 </div>
 
 </section>
+<!-- APPLY FORM -->
 
+<section class="contact">
+
+<h2>Apply For Loan</h2>
+
+<div class="contact-box">
+
+<form>
+
+<input type="text" placeholder="Enter Your Name" required style="width:100%;padding:15px;margin-bottom:15px;border-radius:10px;border:1px solid #ccc;">
+
+<input type="tel" placeholder="Enter Mobile Number" required style="width:100%;padding:15px;margin-bottom:15px;border-radius:10px;border:1px solid #ccc;">
+
+<input type="email" placeholder="Enter Email Address" style="width:100%;padding:15px;margin-bottom:15px;border-radius:10px;border:1px solid #ccc;">
+
+<textarea placeholder="Enter Loan Requirement" rows="5" style="width:100%;padding:15px;margin-bottom:15px;border-radius:10px;border:1px solid #ccc;"></textarea>
+
+<button type="submit" style="background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:15px 30px;border:none;border-radius:30px;font-size:16px;font-weight:600;cursor:pointer;">
+Submit Application
+</button>
+
+</form>
+
+</div>
+
+</section>
 <!-- FOOTER -->
 
 <footer>
