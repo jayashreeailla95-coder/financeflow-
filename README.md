@@ -180,3 +180,20 @@ body{
 
 </body>
 </html>
+
+<div style="background:white; padding:25px; margin:20px; border-radius:15px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center;">
+
+<h2 style="color:#004aad;">Contact Us</h2>
+
+<p><b>📞 Phone:</b> +91 9542359321</p>
+
+<p><b>📧 Email:</b> financeflow@gmail.com</p>
+jayashreeailla95@gmail.com 
+<p><b>📍 Address:</b> Hyderabad, India</p>
+
+<a href="https://wa.me/919542359321 
+style="background:#25D366; color:white; padding:12px 25px; border-radius:30px; text-decoration:none; display:inline-block; margin-top:10px;">
+Chat on WhatsApp
+</a>
+
+</div>
