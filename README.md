@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -652,8 +652,6 @@ document.getElementById("eligibilityResult").innerHTML =
 </footer>
 
 <!-- WHATSAPP -->
-
-<a class="whatsapp" href="https://wa.me/919542359321 target="_blank">
 
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 
