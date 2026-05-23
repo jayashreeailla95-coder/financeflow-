@@ -1,1 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FinanceFlow</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7ff;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#111827,#2563eb);
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:white;
+font-size:32px;
+font-weight:700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+height:90vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content h2{
+font-size:58px;
+margin-bottom:20px;
+font-weight:700;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:15px 32px;
+background:#ffcc00;
+color:#111;
+text-decoration:none;
+font-weight:700;
+border-radius:40px;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+transform:scale(1.05);
+background:white;
+}
+
+/* SLIDER */
+
+.slider{
+background:#2563eb;
+color:white;
+padding:15px 0;
+font-size:18px;
+font-weight:600;
+}
+
+/* TITLE */
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-top:70px;
+margin-bottom:20px;
+color:#1e293b;
+}
+
+/* LOANS */
+
+.loan-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+padding:50px 8%;
+}
+
+.loan-card{
+background:white;
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+transition:0.4s;
+}
+
+.loan-card:hover{
+transform:translateY(-10px);
+}
+
+.loan-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.loan-content{
+padding:22px;
+}
+
+.loan-content h3{
+font-size:26px;
+margin-bottom:12px;
+color:#2563eb;
+}
+
+.loan-content p{
+font-size:15px;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.apply-btn{
+display:inline-block;
+padding:12px 24px;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+}
+
+/* FEATURES */
+
+.features{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+padding:80px 8%;
+color:white;
+margin-top:40px;
+}
+
+.features h2{
+text-align:center;
+font-size:42px;
+margin-bottom:40px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.feature-box{
+background:rgba(255,255,255,0.12);
+padding:30px;
+border-radius:18px;
+text-align:center;
+}
+
+.feature-box h3{
+margin-bottom:12px;
+font-size:24px;
+}
+
+/* EMI */
+
+.emi-section{
+padding:70px 8%;
+text-align:center;
+}
+
+.calculator-box{
+background:white;
+max-width:500px;
+margin:auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.calculator-box input{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.calc-btn{
+background:#2563eb;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* REVIEWS */
+
+.review-section{
+padding:70px 8%;
+background:#eef3ff;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.review-box{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+
+.contact{
+padding:80px 8%;
+text-align:center;
+}
+
+.contact-box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+max-width:700px;
+margin:auto;
+}
+
+.contact-box p{
+font-size:18px;
+margin-bottom:15px;
+}
+
+/* FORM */
+
+form{
+margin-top:30px;
+}
+
+form input,
+form textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.submit-btn{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:22px;
+margin-top:40px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:999;
+}
+
+.whatsapp img{
+width:70px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-content h2{
+font-size:36px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>💰 FinanceFlow</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Loans</a>
+<a href="#">EMI</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Fast & Easy Loan Solutions</h2>
+
+<p>
+Personal Loan | Business Loan | Home Loan | Mortgage Loan | Used Car Loan
+</p>
+
+<a href="#contact" class="hero-btn">Apply Now</a>
+
+</div>
+
+</section>
+
+<!-- SLIDER -->
+
+<div class="slider">
+
+<marquee scrollamount="8">
+
+🔥 Instant Personal Loan &nbsp;&nbsp;&nbsp;
+🏠 Home Loan Available &nbsp;&nbsp;&nbsp;
+🚗 Used Car Loan Available &nbsp;&nbsp;&nbsp;
+💼 Business Loan Available &nbsp;&nbsp;&nbsp;
+🏢 Mortgage Loan Available
+
+</marquee>
+
+</div>
+
+<!-- LOANS -->
+
+<h2 class="section-title">Our Loan Services</h2>
+
+<section class="loan-container">
+
+<div class="loan-card">
+
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
+
+<div class="loan-content">
+
+<h3>Personal Loan</h3>
+
+<p>
+Quick approvals with minimum documentation and low interest rates.
+</p>
+
+<a href="#contact" class="apply-btn">Apply Now</a>
+
+</div>
+</div>
+
+<div class="loan-card">
+
+<img src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?q=80&w=1200&auto=format&fit=crop">
+
+<div class="loan-content">
+
+<h3>Business Loan</h3>
+
+<p>
+Flexible funding solutions for startups and growing businesses.
+</p>
+
+<a href="#contact" class="apply-btn">Apply Now</a>
+
+</div>
+</div>
+
+<div class="loan-card">
+
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop">
+
+<div class="loan-content">
+
+<h3>Home Loan</h3>
+
+<p>
+Affordable home loans with attractive EMI repayment options.
+</p>
+
+<a href="#contact" class="apply-btn">Apply Now</a>
+
+</div>
+</div>
+
+<div class="loan-card">
+
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop">
+
+<div class="loan-content">
+
+<h3>Mortgage Loan</h3>
+
+<p>
+Unlock your property value with mortgage loan support.
+</p>
+
+<a href="#contact" class="apply-btn">Apply Now</a>
+
+</div>
+</div>
+
+<div class="loan-card">
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
+
+<div class="loan-content">
+
+<h3>Used Car Loan</h3>
+
+<p>
+Easy finance solutions for second-hand car purchases.
+</p>
+
+<a href="#contact" class="apply-btn">Apply Now</a>
+
+</div>
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<h2>Why Choose FinanceFlow?</h2>
+
+<div class="feature-grid">
+
+<div class="feature-box">
+<h3>⚡ Instant Approval</h3>
+<p>Quick approvals and fast processing.</p>
+</div>
+
+<div class="feature-box">
+<h3>📄 Less Documentation</h3>
+<p>Easy process with minimum paperwork.</p>
+</div>
+
+<div class="feature-box">
+<h3>💰 Low Interest</h3>
+<p>Affordable EMI repayment plans.</p>
+</div>
+
+<div class="feature-box">
+<h3>🤝 Trusted Support</h3>
+<p>Friendly customer support anytime.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EMI CALCULATOR -->
+
+<section class="emi-section">
+
+<h2 class="section-title">EMI Calculator</h2>
+
+<div class="calculator-box">
+
+<input type="number" id="loanAmount" placeholder="Loan Amount">
+
+<input type="number" id="interestRate" placeholder="Interest Rate (%)">
+
+<input type="number" id="loanTenure" placeholder="Loan Tenure (Months)">
+
+<button class="calc-btn" onclick="calculateEMI()">
+
+Calculate EMI
+
+</button>
+
+<h3 id="emiResult" style="margin-top:20px;color:#2563eb;"></h3>
+
+</div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="review-section">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review-box">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+Very fast approval process and excellent support.
+</p>
+
+<h4>- Ramesh</h4>
+
+</div>
+
+<div class="review-box">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+Smooth process with minimum documents.
+</p>
+
+<h4>- Priya</h4>
+
+</div>
+
+<div class="review-box">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+Highly recommended finance service.
+</p>
+
+<h4>- Kiran</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-box">
+
+<p><b>📞 Phone:</b> +91 9999999999</p>
+
+<p><b>📧 Email:</b> jayashreeailla95@gmail.com</p>
+
+<p><b>📍 Address:</b> Hyderabad, India</p>
+
+<p><b>⏰ Timing:</b> Mon - Sat : 9AM to 7PM</p>
+
+<form>
+
+<input type="text" placeholder="Enter Your Name" required>
+
+<input type="tel" placeholder="Enter Mobile Number" required>
+
+<input type="email" placeholder="Enter Email Address">
+
+<textarea rows="5" placeholder="Enter Loan Requirement"></textarea>
+
+<button type="submit" class="submit-btn">
+
+Submit Application
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 FinanceFlow. All Rights Reserved.</p>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/919999999999?text=Hello%20FinanceFlow,%20I%20need%20loan%20details"
+target="_blank">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+</a>
+
+<script>
+
+function calculateEMI(){
+
+let P = document.getElementById("loanAmount").value;
+
+let R = document.getElementById("interestRate").value / 12 / 100;
+
+let N = document.getElementById("loanTenure").value;
+
+let EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+
+document.getElementById("emiResult").innerHTML =
+"Monthly EMI: ₹ " + Math.round(EMI);
+
+}
+
+</script>
+
+</body>
+
+</html>
