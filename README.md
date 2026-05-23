@@ -461,26 +461,17 @@ Easy finance solutions for second-hand car purchases.
 <button type="submit" style="background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:15px 30px;border:none;border-radius:30px;font-size:16px;font-weight:600;cursor:pointer;">
 Submit Application
 </button>
-
 </form>
-
 </div>
-
 </section>
 <!-- FOOTER -->
-
 <footer>
-
 <p>© 2026 FinanceFlow. All Rights Reserved.</p>
-
 </footer>
-
 <!-- WHATSAPP -->
-
 <a class="whatsapp" href="https://wa.me/919542359321" target="_blank">
 
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-
 </a>
 
 </body>
