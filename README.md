@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FinanceFlow<title>
+<title>FinanceFlow</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -94,6 +94,16 @@ transition:0.3s;
 .hero-btn:hover{
 transform:scale(1.05);
 background:white;
+}
+
+/* SLIDER */
+
+.slider{
+background:#2563eb;
+color:white;
+padding:15px 0;
+font-size:18px;
+font-weight:600;
 }
 
 /* TITLE */
@@ -192,16 +202,65 @@ margin-bottom:12px;
 font-size:24px;
 }
 
+/* EMI */
+
+.emi-section{
+padding:70px 8%;
+text-align:center;
+}
+
+.calculator-box{
+background:white;
+max-width:500px;
+margin:auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.calculator-box input{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.calc-btn{
+background:#2563eb;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* REVIEWS */
+
+.review-section{
+padding:70px 8%;
+background:#eef3ff;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.review-box{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
 /* CONTACT */
 
 .contact{
 padding:80px 8%;
 text-align:center;
-}
-
-.contact h2{
-font-size:42px;
-margin-bottom:25px;
 }
 
 .contact-box{
@@ -216,6 +275,32 @@ margin:auto;
 .contact-box p{
 font-size:18px;
 margin-bottom:15px;
+}
+
+/* FORM */
+
+form{
+margin-top:30px;
+}
+
+form input,
+form textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.submit-btn{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
 }
 
 /* FOOTER */
@@ -267,12 +352,12 @@ display:none;
 
 <header>
 
-<h1>FinanceFlow</h1>
+<h1>💰 FinanceFlow</h1>
 
 <nav>
 <a href="#">Home</a>
 <a href="#">Loans</a>
-<a href="#">Features</a>
+<a href="#">EMI</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -290,11 +375,27 @@ display:none;
 Personal Loan | Business Loan | Home Loan | Mortgage Loan | Used Car Loan
 </p>
 
-<a href="#contact" class="hero-btn">Contact Now</a>
+<a href="#contact" class="hero-btn">Apply Now</a>
 
 </div>
 
 </section>
+
+<!-- SLIDER -->
+
+<div class="slider">
+
+<marquee scrollamount="8">
+
+🔥 Instant Personal Loan &nbsp;&nbsp;&nbsp;
+🏠 Home Loan Available &nbsp;&nbsp;&nbsp;
+🚗 Used Car Loan Available &nbsp;&nbsp;&nbsp;
+💼 Business Loan Available &nbsp;&nbsp;&nbsp;
+🏢 Mortgage Loan Available
+
+</marquee>
+
+</div>
 
 <!-- LOANS -->
 
@@ -328,7 +429,7 @@ Quick approvals with minimum documentation and low interest rates.
 <h3>Business Loan</h3>
 
 <p>
-Flexible funding solutions for startups, shops, and growing businesses.
+Flexible funding solutions for startups and growing businesses.
 </p>
 
 <a href="#contact" class="apply-btn">Apply Now</a>
@@ -362,7 +463,7 @@ Affordable home loans with attractive EMI repayment options.
 <h3>Mortgage Loan</h3>
 
 <p>
-Unlock your property value with high-value mortgage loans.
+Unlock your property value with mortgage loan support.
 </p>
 
 <a href="#contact" class="apply-btn">Apply Now</a>
@@ -399,44 +500,29 @@ Easy finance solutions for second-hand car purchases.
 
 <div class="feature-box">
 <h3>⚡ Instant Approval</h3>
-<p>Fast processing and quicker disbursement.</p>
+<p>Quick approvals and fast processing.</p>
 </div>
 
 <div class="feature-box">
 <h3>📄 Less Documentation</h3>
-<p>Simple process with minimum paperwork.</p>
+<p>Easy process with minimum paperwork.</p>
 </div>
 
 <div class="feature-box">
-<h3>💰 Low Interest Rates</h3>
-<p>Affordable EMI and flexible repayment plans.</p>
+<h3>💰 Low Interest</h3>
+<p>Affordable EMI repayment plans.</p>
 </div>
 
 <div class="feature-box">
-<h3>🤝 Trusted Service</h3>
-<p>Dedicated customer support and guidance.</p>
+<h3>🤝 Trusted Support</h3>
+<p>Friendly customer support anytime.</p>
 </div>
 
 </div>
 
 </section>
-<!-- ANIMATED SLIDER -->
 
-<div class="slider">
-
-<marquee scrollamount="8">
-
-🔥 Instant Personal Loan &nbsp;&nbsp;&nbsp;
-🏠 Home Loan Available &nbsp;&nbsp;&nbsp;
-🚗 Used Car Loan Available &nbsp;&nbsp;&nbsp;
-💼 Business Loan Available &nbsp;&nbsp;&nbsp;
-🏢 Mortgage Loan Available
-
-</marquee>
-
-</div>
-
-<!-- EMI CALCULATOR -->
+<!-- EMI -->
 
 <section class="emi-section">
 
@@ -451,9 +537,7 @@ Easy finance solutions for second-hand car purchases.
 <input type="number" id="loanTenure" placeholder="Loan Tenure (Months)">
 
 <button class="calc-btn" onclick="calculateEMI()">
-
 Calculate EMI
-
 </button>
 
 <h3 id="emiResult" style="margin-top:20px;color:#2563eb;"></h3>
@@ -462,7 +546,7 @@ Calculate EMI
 
 </section>
 
-<!-- CUSTOMER REVIEWS -->
+<!-- REVIEWS -->
 
 <section class="review-section">
 
@@ -471,120 +555,80 @@ Calculate EMI
 <div class="review-grid">
 
 <div class="review-box">
-
 <h3>⭐⭐⭐⭐⭐</h3>
-
-<p>
-Very fast approval process and excellent support.
-</p>
-
+<p>Very fast approval process and excellent support.</p>
 <h4>- Ramesh</h4>
-
 </div>
 
 <div class="review-box">
-
 <h3>⭐⭐⭐⭐⭐</h3>
-
-<p>
-Smooth process with minimum documents.
-</p>
-
+<p>Smooth process with minimum documents.</p>
 <h4>- Priya</h4>
-
 </div>
 
 <div class="review-box">
-
 <h3>⭐⭐⭐⭐⭐</h3>
-
-<p>
-Highly recommended finance service.
-</p>
-
+<p>Highly recommended finance service.</p>
 <h4>- Kiran</h4>
-
 </div>
 
 </div>
 
 </section>
 
-<!-- LOAN ELIGIBILITY CHECKER -->
+<!-- CONTACT -->
 
-<section class="emi-section">
+<section class="contact" id="contact">
 
-<h2 class="section-title">Loan Eligibility Checker</h2>
+<h2 class="section-title">Contact Us</h2>
 
-<div class="calculator-box">
+<div class="contact-box">
 
-<input type="number" id="salary" placeholder="Enter Monthly Salary">
+<p><b>📞 Phone:</b> +91 9999999999</p>
 
-<button class="calc-btn" onclick="checkEligibility()">
+<p><b>📧 Email:</b> jayashreeailla95@gmail.com</p>
 
-Check Eligibility
+<p><b>📍 Address:</b> Hyderabad, India</p>
 
+<p><b>⏰ Timing:</b> Mon - Sat : 9AM to 7PM</p>
+
+<form>
+
+<input type="text" placeholder="Enter Your Name" required>
+
+<input type="tel" placeholder="Enter Mobile Number" required>
+
+<input type="email" placeholder="Enter Email Address">
+
+<textarea rows="5" placeholder="Enter Loan Requirement"></textarea>
+
+<button type="submit" class="submit-btn">
+Submit Application
 </button>
 
-<h3 id="eligibilityResult" style="margin-top:20px;color:#2563eb;"></h3>
+</form>
 
 </div>
 
 </section>
 
-<!-- AUTO WHATSAPP ENQUIRY -->
+<!-- FOOTER -->
 
-<section class="contact">
+<footer>
 
-<h2 class="section-title">Quick WhatsApp Enquiry</h2>
+<p>© 2026 FinanceFlow. All Rights Reserved.</p>
 
-<a href="https://wa.me/919542359321text=Hello%20FinanceFlow,%20I%20need%20loan%20details"
+</footer>
 
-style="background:#25D366;
-color:white;
-padding:18px 35px;
-border-radius:40px;
-text-decoration:none;
-font-size:18px;
-font-weight:600;">
+<!-- WHATSAPP -->
 
-Chat on WhatsApp
+<a class="whatsapp"
+href="https://wa.me/919999999999?text=Hello%20FinanceFlow,%20I%20need%20loan%20details"
+target="_blank">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 
 </a>
-
-</section>
-
-<!-- LOGO SECTION -->
-
-<section style="text-align:center;padding:50px 20px;background:white;">
-
-<h1 style="font-size:50px;color:#2563eb;">
-💰 FinanceFlow
-</h1>
-
-<p style="font-size:20px;color:#555;">
-Fast & Easy Loan Solutions
-</p>
-
-</section>
-
-<!-- ADMIN PANEL -->
-
-<section style="padding:70px 8%;background:#111827;color:white;text-align:center;">
-
-<h2 style="font-size:40px;margin-bottom:25px;">
-Admin Panel
-</h2>
-
-<p>📧 Email: jayashreeailla95@gmail.com</p>
-
-<p>📱 WhatsApp Support Active</p>
-
-<p>🟢 Website Status: Active</p>
-
-<p>💼 Loan Services Running Successfully</p>
-
-</section>
 
 <script>
 
@@ -603,58 +647,7 @@ document.getElementById("emiResult").innerHTML =
 
 }
 
-function checkEligibility(){
-
-let salary = document.getElementById("salary").value;
-
-if(salary >= 17000){
-
-document.getElementById("eligibilityResult").innerHTML =
-"✅ Eligible for Loan";
-
-}else{
-
-document.getElementById("eligibilityResult").innerHTML =
-"❌ Minimum Salary Required ₹17000";
-
-}
-
-}
-
 </script>
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<h2>Contact Us</h2>
-
-<div class="contact-box">
-
-<p><b>📞 Phone:</b> +91 9542359321</p>
-
-<p><b>📧 Email:</b> jayashreeailla95@gmail.com</p>
-
-<p><b>📍 Address:</b> Hyderabad, India</p>
-
-<p><b>⏰ Working Hours:</b> Mon - Sat : 9AM to 7PM</p>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>© 2026 FinanceFlow. All Rights Reserved.</p>
-
-</footer>
-
-<!-- WHATSAPP -->
-
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-
-</a>
 
 </body>
 
