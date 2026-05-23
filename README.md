@@ -421,7 +421,208 @@ Easy finance solutions for second-hand car purchases.
 </div>
 
 </section>
+<!-- ANIMATED SLIDER -->
 
+<div class="slider">
+
+<marquee scrollamount="8">
+
+🔥 Instant Personal Loan &nbsp;&nbsp;&nbsp;
+🏠 Home Loan Available &nbsp;&nbsp;&nbsp;
+🚗 Used Car Loan Available &nbsp;&nbsp;&nbsp;
+💼 Business Loan Available &nbsp;&nbsp;&nbsp;
+🏢 Mortgage Loan Available
+
+</marquee>
+
+</div>
+
+<!-- EMI CALCULATOR -->
+
+<section class="emi-section">
+
+<h2 class="section-title">EMI Calculator</h2>
+
+<div class="calculator-box">
+
+<input type="number" id="loanAmount" placeholder="Loan Amount">
+
+<input type="number" id="interestRate" placeholder="Interest Rate (%)">
+
+<input type="number" id="loanTenure" placeholder="Loan Tenure (Months)">
+
+<button class="calc-btn" onclick="calculateEMI()">
+
+Calculate EMI
+
+</button>
+
+<h3 id="emiResult" style="margin-top:20px;color:#2563eb;"></h3>
+
+</div>
+
+</section>
+
+<!-- CUSTOMER REVIEWS -->
+
+<section class="review-section">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review-box">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+Very fast approval process and excellent support.
+</p>
+
+<h4>- Ramesh</h4>
+
+</div>
+
+<div class="review-box">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+Smooth process with minimum documents.
+</p>
+
+<h4>- Priya</h4>
+
+</div>
+
+<div class="review-box">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+Highly recommended finance service.
+</p>
+
+<h4>- Kiran</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LOAN ELIGIBILITY CHECKER -->
+
+<section class="emi-section">
+
+<h2 class="section-title">Loan Eligibility Checker</h2>
+
+<div class="calculator-box">
+
+<input type="number" id="salary" placeholder="Enter Monthly Salary">
+
+<button class="calc-btn" onclick="checkEligibility()">
+
+Check Eligibility
+
+</button>
+
+<h3 id="eligibilityResult" style="margin-top:20px;color:#2563eb;"></h3>
+
+</div>
+
+</section>
+
+<!-- AUTO WHATSAPP ENQUIRY -->
+
+<section class="contact">
+
+<h2 class="section-title">Quick WhatsApp Enquiry</h2>
+
+<a href="https://wa.me/919542359321text=Hello%20FinanceFlow,%20I%20need%20loan%20details"
+
+style="background:#25D366;
+color:white;
+padding:18px 35px;
+border-radius:40px;
+text-decoration:none;
+font-size:18px;
+font-weight:600;">
+
+Chat on WhatsApp
+
+</a>
+
+</section>
+
+<!-- LOGO SECTION -->
+
+<section style="text-align:center;padding:50px 20px;background:white;">
+
+<h1 style="font-size:50px;color:#2563eb;">
+💰 FinanceFlow
+</h1>
+
+<p style="font-size:20px;color:#555;">
+Fast & Easy Loan Solutions
+</p>
+
+</section>
+
+<!-- ADMIN PANEL -->
+
+<section style="padding:70px 8%;background:#111827;color:white;text-align:center;">
+
+<h2 style="font-size:40px;margin-bottom:25px;">
+Admin Panel
+</h2>
+
+<p>📧 Email: jayashreeailla95@gmail.com</p>
+
+<p>📱 WhatsApp Support Active</p>
+
+<p>🟢 Website Status: Active</p>
+
+<p>💼 Loan Services Running Successfully</p>
+
+</section>
+
+<script>
+
+function calculateEMI(){
+
+let P = document.getElementById("loanAmount").value;
+
+let R = document.getElementById("interestRate").value / 12 / 100;
+
+let N = document.getElementById("loanTenure").value;
+
+let EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+
+document.getElementById("emiResult").innerHTML =
+"Monthly EMI: ₹ " + Math.round(EMI);
+
+}
+
+function checkEligibility(){
+
+let salary = document.getElementById("salary").value;
+
+if(salary >= 17000){
+
+document.getElementById("eligibilityResult").innerHTML =
+"✅ Eligible for Loan";
+
+}else{
+
+document.getElementById("eligibilityResult").innerHTML =
+"❌ Minimum Salary Required ₹17000";
+
+}
+
+}
+
+</script>
 <!-- CONTACT -->
 
 <section class="contact" id="contact">
@@ -430,7 +631,7 @@ Easy finance solutions for second-hand car purchases.
 
 <div class="contact-box">
 
-<p><b>📞 Phone:</b> +91 9999999999</p>
+<p><b>📞 Phone:</b> +91 9542359321</p>
 
 <p><b>📧 Email:</b> jayashreeailla95@gmail.com</p>
 
@@ -452,7 +653,7 @@ Easy finance solutions for second-hand car purchases.
 
 <!-- WHATSAPP -->
 
-<a class="whatsapp" href="https://wa.me/919999999999" target="_blank">
+<a class="whatsapp" href="https://wa.me/919542359321 target="_blank">
 
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 
