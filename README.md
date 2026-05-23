@@ -468,7 +468,228 @@ Submit Application
 <footer>
 <p>© 2026 FinanceFlow. All Rights Reserved.</p>
 </footer>
-<!-- WHATSAPP -->
+<!-- WHATSAPP --> <!-- LOGO -->
+
+<div style="text-align:center; padding:25px; background:white;">
+  
+<h1 style="font-size:45px; color:#2563eb;">
+💰 FinanceFlow
+</h1>
+
+<p style="font-size:18px; color:#555;">
+Fast & Easy Loan Solutions
+</p>
+
+</div>
+
+<!-- ANIMATED SLIDER -->
+
+<section style="overflow:hidden; background:#2563eb; color:white; padding:15px 0;">
+
+<marquee behavior="scroll" direction="left" scrollamount="8">
+
+🔥 Personal Loan Available &nbsp;&nbsp;&nbsp;
+🏠 Home Loan Available &nbsp;&nbsp;&nbsp;
+🚗 Used Car Loan Available &nbsp;&nbsp;&nbsp;
+🏢 Mortgage Loan Available &nbsp;&nbsp;&nbsp;
+💼 Business Loan Available
+
+</marquee>
+
+</section>
+
+<!-- EMI CALCULATOR -->
+
+<section style="padding:60px 8%; text-align:center;">
+
+<h2 style="font-size:40px; margin-bottom:25px; color:#1e293b;">
+EMI Calculator
+</h2>
+
+<div style="background:white; max-width:500px; margin:auto; padding:30px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+
+<input type="number" id="loanAmount" placeholder="Loan Amount"
+style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<input type="number" id="interestRate" placeholder="Interest Rate (%)"
+style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<input type="number" id="loanTenure" placeholder="Loan Tenure (Months)"
+style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<button onclick="calculateEMI()"
+style="background:#2563eb; color:white; padding:15px 30px; border:none; border-radius:30px; font-size:16px; cursor:pointer;">
+
+Calculate EMI
+
+</button>
+
+<h3 id="emiResult" style="margin-top:20px; color:#2563eb;"></h3>
+
+</div>
+
+</section>
+
+<script>
+
+function calculateEMI(){
+
+let P = document.getElementById("loanAmount").value;
+
+let R = document.getElementById("interestRate").value / 12 / 100;
+
+let N = document.getElementById("loanTenure").value;
+
+let EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+
+document.getElementById("emiResult").innerHTML =
+"Monthly EMI: ₹ " + Math.round(EMI);
+
+}
+
+</script>
+
+<!-- CUSTOMER REVIEWS -->
+
+<section style="padding:70px 8%; background:#f4f7ff;">
+
+<h2 style="text-align:center; font-size:40px; margin-bottom:40px;">
+Customer Reviews
+</h2>
+
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px;">
+
+<div style="background:white; padding:25px; border-radius:20px; box-shadow:0 10px 20px rgba(0,0,0,0.1);">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+Very fast approval process. Excellent support team.
+</p>
+
+<h4>- Ramesh</h4>
+
+</div>
+
+<div style="background:white; padding:25px; border-radius:20px; box-shadow:0 10px 20px rgba(0,0,0,0.1);">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+Got my business loan quickly with low documentation.
+</p>
+
+<h4>- Priya</h4>
+
+</div>
+
+<div style="background:white; padding:25px; border-radius:20px; box-shadow:0 10px 20px rgba(0,0,0,0.1);">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+Professional service and smooth process.
+</p>
+
+<h4>- Kiran</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LOAN ELIGIBILITY CHECKER -->
+
+<section style="padding:70px 8%; text-align:center;">
+
+<h2 style="font-size:40px; margin-bottom:30px;">
+Loan Eligibility Checker
+</h2>
+
+<div style="background:white; max-width:500px; margin:auto; padding:30px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+
+<input type="number" id="salary" placeholder="Monthly Salary"
+style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<button onclick="checkEligibility()"
+style="background:#7c3aed; color:white; padding:15px 30px; border:none; border-radius:30px; font-size:16px; cursor:pointer;">
+
+Check Eligibility
+
+</button>
+
+<h3 id="eligibilityResult" style="margin-top:20px;"></h3>
+
+</div>
+
+</section>
+
+<script>
+
+function checkEligibility(){
+
+let salary = document.getElementById("salary").value;
+
+if(salary >= 25000){
+
+document.getElementById("eligibilityResult").innerHTML =
+"✅ You are eligible for loan.";
+
+}else{
+
+document.getElementById("eligibilityResult").innerHTML =
+"❌ Minimum salary should be ₹25,000.";
+
+}
+
+}
+
+</script>
+
+<!-- AUTO WHATSAPP ENQUIRY -->
+
+<section style="padding:60px 8%; text-align:center;">
+
+<h2 style="font-size:40px; margin-bottom:25px;">
+Quick WhatsApp Enquiry
+</h2>
+
+<a href="https://wa.me/919999999999?text=Hello%20FinanceFlow,%20I%20need%20loan%20details"
+
+style="background:#25D366; color:white; padding:18px 35px; border-radius:40px; text-decoration:none; font-size:18px; font-weight:600;">
+
+Chat on WhatsApp
+
+</a>
+
+</section>
+
+<!-- ADMIN PANEL -->
+
+<section style="padding:70px 8%; background:#111827; color:white; text-align:center;">
+
+<h2 style="font-size:40px; margin-bottom:25px;">
+Admin Panel
+</h2>
+
+<p>
+📧 Email: jayashreeailla95@gmail.com
+</p>
+
+<p>
+📱 WhatsApp Support Active
+</p>
+
+<p>
+🟢 Website Status: Live
+</p>
+
+<p>
+💼 Loan Services: Active
+</p>
+
+</section>
 <a class="whatsapp" href="https://wa.me/919542359321" target="_blank">
 
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
